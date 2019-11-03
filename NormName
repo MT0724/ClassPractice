@@ -1,7 +1,21 @@
-#利用map()实现名字的规范化
+#本例用两种方法实现名字的规范化（名字首字母大写，其他字母小写)
+
+#（1）利用map()实现名字的规范化
 def normName(name):
 	return name[0].upper()+name[1:].lower()
 
 List=['LUCy','adam','jIM','tonY']
 L=map(normName,List)
 print(list(L))
+
+#（2）用一般方法实现名字的规范化
+# def norm_name(L):
+# 	List=[]
+# 	for name in L:
+# 		List.append(name[0].upper()+name[1:].lower())
+# 	return List
+
+# NameList=['LUCy','adam','jIM','tonY']
+# print(norm_name(NameList))
+
+
