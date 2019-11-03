@@ -1,0 +1,10 @@
+#prod()函数可以接收一个list并利用reduce求积
+from functools import reduce
+def cal(x,y):
+	return x*y
+
+def prod(list):
+	return reduce(cal,list)
+
+List=[1,2,3,4]
+print(prod(List))
