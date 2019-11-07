@@ -1,0 +1,27 @@
+#给定一个整数数组(这里用list)和一个目标值 target，
+#请你在该数组中找出和为目标值的那两个整数，并返回他们的下标。
+#(1)双重循环法
+# def seeksum(list,target):
+# 	index=[]
+# 	for i in range(0,len(list)):
+# 		for j in range(i+1,len(list)):
+# 			if ((list[i]+list[j])==target):
+# 				index.append(i)
+# 				index.append(j)
+# 	return index
+#(2)开辟一个字典空间，以空间换时间
+def seeksum(list,target):
+	dict_n={}
+	index=[]
+	for i in range(len(list)):
+		num=target-list[i]
+		if num not in dict_n:
+			dict_n[list[i]]=i
+		else:
+			index.append(dict_n[num])
+			index.append(i) 
+	return index
+
+L=[3,1,6,9,12,8]
+t=17
+print(seeksum(L,t))
