@@ -1,0 +1,17 @@
+#给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
+def find_arraylen(list):
+	L=[]
+	l=len(list)
+	for i in range(l):
+		for j in range(i+1,l):
+			if list[j] not in L:
+				L.append(list[j])
+			else:
+				break
+	return len(L)
+	
+
+arr=['a','s','c','b','s','a','e']
+l=find_arraylen(arr)
+print('该list中不含重复字符的最长子串长度为：')
+print(l)
