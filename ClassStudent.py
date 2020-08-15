@@ -5,6 +5,7 @@ class Student(object):
 	def show(self):
 		print(self.__name)
 		print(self.__score)
+		
 def main():
 	a=Student('Jane',100)
 	#print(a.__name)  
